@@ -1,0 +1,11 @@
+@import "./lib/core/reset.scss";
+@import "./usage/module/index.scss";
+@import "./usage/module/home.scss";
+@import "./usage/libs/swiper.min.css";
+@import "./usage/common/common.scss";
+
+html,body{
+  width: 100%;
+  height: 100%;
+  @include flexbox();
+}

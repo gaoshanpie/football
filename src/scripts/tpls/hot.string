@@ -1,0 +1,31 @@
+    <div class="home-nav">
+        <ul class="nav" id="nav">
+            <li class="active">足球生活</li>
+            <li>足球美女</li>
+            <li>足球现场</li>
+        </ul>
+    </div>
+    <div class="content" id="content">
+        <div class="swiper-container hot-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide hot-slide">
+                    <div class="wrapper" id="wrapper">
+                        <div class="scroll">
+                            <div class="self">
+                                <dl ng-repeat="item in data">
+                                    <dt><img ng-src={{item.img}} alt=""/></dt>
+                                    <dd><span>{{item.title}}</span></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide hot-slide">
+                    足球美女
+                </div>
+                <div class="swiper-slide hot-slide">
+                    足球现场
+                </div>
+            </div>
+        </div>
+    </div>

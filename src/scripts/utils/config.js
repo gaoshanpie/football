@@ -1,0 +1,51 @@
+
+angular.module("mapp")
+    .config(function ($stateProvider,$urlRouterProvider) {
+        $urlRouterProvider
+            .otherwise("guide")
+            .when("/app","app/home")
+            .when("/app/home","/app/home/hot");
+        $stateProvider
+            .state("guide",{
+                url:"/guide",
+                //template:"这是引导页"
+                templateUrl: "./src/scripts/tpls/guide.string",
+                controller:"guideCtrl"
+            })
+            .state("app",{
+                url:"/app",
+                templateUrl:"./src/scripts/tpls/app.string",
+                controller:"appCtrl"
+            })
+            .state("app.home",{
+                url:"/home",
+                templateUrl:"./src/scripts/tpls/home.string",
+                controller:"homeCtrl"
+            })
+            .state("app.home.hot",{
+                url:"/hot",
+                templateUrl:"./src/scripts/tpls/hot.string",
+                controller:"hotCtrl"
+            })
+            .state("app.home.follow",{
+                url:"/follow",
+                templateUrl:"./src/scripts/tpls/follow.string"
+            })
+            .state("app.find",{
+                url:"/find",
+                templateUrl:"./src/scripts/tpls/find.string"
+            })
+            .state("app.carme",{
+                url:"/carme",
+                templateUrl:"./src/scripts/tpls/carme.string"
+            })
+            .state("app.my",{
+                url:"/my",
+                templateUrl:"./src/scripts/tpls/my.string"
+            })
+            .state("app.exit",{
+                url:"/exit",
+                templateUrl:"./src/scripts/tpls/exit.string"
+            })
+
+    });
